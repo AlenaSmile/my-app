@@ -15,26 +15,17 @@ const App = () => {
 
     return ( <
         View style = { styles.container } >
-        <
-        FlatList data = { languages }
-        keyExtractor = {
-            (item) => item.id.toString()
-        }
-        renderItem = {
-            ({ item }) => ( <
-                LanguageItem language = { item.name }
-                experience = { item.experience }
-                logo = { item.logo }
-                />
-            )
-        }
-        refreshControl = { <
-            RefreshControl refreshing = { refreshing }
-            onRefresh = { onRefresh }
-            />
-        }
-        /> < /
-        View >
+          <FlatList 
+            data = { languages }
+            keyExtractor = { (item) => item.id.toString() }
+            renderItem = { ({ item }) => ( 
+                <LanguageItem language = { item.name } experience = { item.experience } logo = { item.logo }/>
+            )}
+            refreshControl = { 
+                <RefreshControl refreshing = { refreshing } onRefresh = { onRefresh }/>
+            }
+        /> 
+      </View >
     );
 };
 
