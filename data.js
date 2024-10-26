@@ -7,10 +7,10 @@ export const languages = [
   },
   
   {
-        id: 2,
-        name: 'Python',
-        experience: '2 year of experience',
-        logo: <img src="../python.png" alt="pylogo">,
+         id: 2,
+         name: 'Python',
+         experience: '1 year of experience',
+         logo:  <img src="../python.png" alt="pylogo">,
     },
   
     {
