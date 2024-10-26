@@ -1,10 +1,11 @@
-export const languages = [{
+export const languages = [
+  {
         id: 1,
         name: 'JavaScript',
         experience: '2 years of experience',
         logo: 'https://example.com/javascript-logo.png',
-    },
-    {
+  },
+  {
         id: 2,
         name: 'Python',
         experience: '1 year of experience',
