@@ -1,23 +1,48 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { FlatList, RefreshControl, StyleSheet, View } from 'react-native';
+import LanguageItem from './components/LanguageItem';
+import { languages } from './data';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hi! My name is Alena</Text>
-    </View>
-  );
-}
+const App = () => {
+    const [refreshing, setRefreshing] = useState(false);
+
+    const onRefresh = () => {
+        setRefreshing(true);
+        setTimeout(() => {
+            setRefreshing(false);
+        }, 2000);
+    };
+
+    return ( <
+        View style = { styles.container } >
+        <
+        FlatList data = { languages }
+        keyExtractor = {
+            (item) => item.id.toString()
+        }
+        renderItem = {
+            ({ item }) => ( <
+                LanguageItem language = { item.name }
+                experience = { item.experience }
+                logo = { item.logo }
+                />
+            )
+        }
+        refreshControl = { <
+            RefreshControl refreshing = { refreshing }
+            onRefresh = { onRefresh }
+            />
+        }
+        /> < /
+        View >
+    );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#483D8B',
-  },
-  text: {
-    color: 'white',
-    fontSize: 24,
-  },
+    container: {
+        flex: 1,
+        padding: 20,
+    },
 });
+
+export default App;
