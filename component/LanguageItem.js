@@ -2,16 +2,12 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 const LanguageItem = ({ language, experience, logo }) => {
-    return ( <
-        View style = { styles.container } >
-        <
-        Text style = { styles.title } > { language } < /Text> <
-        Text style = { styles.experience } > { experience } < /Text> <
-        Image source = {
-            { uri: logo } }
-        style = { styles.logo }
-        /> <
-        /View>
+    return ( 
+        <View style={styles.container}>
+          <Text style={styles.title}>{language}</Text> 
+          <Text style = { styles.experience } > { experience } < /Text> 
+          <Image source = { { uri: logo } } style = { styles.logo }/> 
+        </View>
     );
 };
 
