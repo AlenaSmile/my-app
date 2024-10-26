@@ -5,12 +5,14 @@ export const languages = [
         experience: '3 years of experience',
         logo: <img src="../images/javascript.png" alt="jslogo">,
   },
+  
   {
         id: 2,
         name: 'Python',
         experience: '2 year of experience',
         logo: <img src="../images/python.png" alt="pylogo">,
     },
+  
     {
         id: 3,
         name: 'C++',
