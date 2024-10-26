@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList, RefreshControl, StyleSheet, View } from 'react-native';
-import LanguageItem from './components/LanguageItem';
+import LanguageItem from './component/LanguageItem';
 import { languages } from './data';
 
 const App = () => {
